@@ -1,0 +1,25 @@
+{
+  "name": "natours_css",
+  "version": "1.0.0",
+  "description": "sass procatice project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turfanda/natours_css.git"
+  },
+  "author": "turfanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turfanda/natours_css/issues"
+  },
+  "homepage": "https://github.com/turfanda/natours_css#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

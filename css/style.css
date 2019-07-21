@@ -7,23 +7,31 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /* width ve hiegth hesaplanırken borderları hesaba katmıyurmuş*/
+    box-sizing: inherit;/*Normalde bu değer inherti edilmez ama bunun * sleector altına koyup inherit deyince yukarıda ne varsa alır. yani bodye koyduğpumuz değer hepsine geçer.*/
+}
+
+html{
+    /*font-size: 10px;*/ /*tüm remler bu fontsize göre hesaplnacağından 10 un katı olarka ayarlanıyor. 1 rem root fontsize a eşit.*/
+    font-size: 62.5%;/*font size a fix pixel değeri vermek iyi değil daha doğtusu borewserin default olan 16 değerini alıp kendine göre 10 pixle ayarlamak.*/
 }
 
 body {
     font-family: "Lato", sans-serif;
-    /*family inherit edilir*/
+    /*family inherit edilir.unutma text raleted özelilikler inherit edilir.*/
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1, 7;
+    /* font-size: 16px; */
+    line-height: 1.7;
     /* normal line heightin 1.7 katı olarak ayarlıyor.*/
     color: #777;
-    padding: 30px;
+    padding: 3rem;
     /*padding inherit edilmez*/
+    box-sizing: border-box;
+    /* width ve hiegth hesaplanırken borderları hesaba katmıyurmuş*/
 }
 
 .header {
@@ -35,21 +43,22 @@ body {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
     ;
 }
 
-.logo {
-    height: 35px;
+.header__logo {
+    height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%, -50%);
     /*top left elemntin tam köşesinden başlıyor bu yüzden tam ortalanmıyor. bu şekilde trnsfomr edince elemnti ortalamış oluyorsun*/
 }
@@ -57,19 +66,125 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 6rem;
 
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem ;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+
+    80% {
+        transform: translateX(3%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+
+    80% {
+        transform: translateX(-3%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    ;
+}
+
+.btn--white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn--white::after {
+    background-color: #fff;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4)  scaleY(1.6);
+    opacity: 0;
+}
+
+.btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; /* delay koyduğun zaman animasyonun basşındaki değeleri direk atıyor. Bunu koymazsan kabak gibi ortada bekleyip öyle çalışıyor animasyon*/
 }
