@@ -13,57 +13,7 @@ html {
   /*font size a fix pixel değeri vermek iyi değil daha doğtusu borewserin default olan 16 değerini alıp kendine göre 10 pixle ayarlamak.*/ }
 
 body {
-  font-family: "Lato", sans-serif;
-  /*family inherit edilir.unutma text raleted özelilikler inherit edilir.*/
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  /* normal line heightin 1.7 katı olarak ayarlıyor.*/
-  color: #777;
-  padding: 3rem;
-  /*padding inherit edilmez*/
-  box-sizing: border-box;
-  /* width ve hiegth hesaplanırken borderları hesaba katmıyurmuş*/ }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.808), rgba(126, 213, 111, 0.808)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    /*top left elemntin tam köşesinden başlıyor bu yüzden tam ortalanmıyor. bu şekilde trnsfomr edince elemnti ortalamış oluyorsun*/ }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
+  box-sizing: border-box; }
 
 @keyframes moveInLeft {
   0% {
@@ -92,6 +42,32 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -136,3 +112,24 @@ body {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
   /* delay koyduğun zaman animasyonun basşındaki değeleri direk atıyor. Bunu koymazsan kabak gibi ortada bekleyip öyle çalışıyor animasyon*/ }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.808), rgba(126, 213, 111, 0.808)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    /*top left elemntin tam köşesinden başlıyor bu yüzden tam ortalanmıyor. bu şekilde trnsfomr edince elemnti ortalamış oluyorsun*/ }
