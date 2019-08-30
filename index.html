@@ -7,15 +7,33 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/icon-font.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/icon-font.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
     <title>Natours | Exciting tours for adventurous people</title>
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__backgorund">
+
+        </div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Turfanza</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your Benefits</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="header__logo-box">
             <img src="img/logo-white.png" alt="Logo" class="header__logo">
@@ -315,6 +333,21 @@
             </div>
         </div>
     </footer>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="" class="popup__img">
+                <img src="img/nat-9.jpg" alt="" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start Booking</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small" >Please &ndash; read this long text</h3>
+                <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae nunc sed velit dignissim sodales ut eu. Cursus sit amet dictum sit. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. Eu non diam phasellus vestibulum. Mi tempus imperdiet nulla malesuada pellentesque elit eget. Id aliquet risus feugiat in ante metus dictum at. Enim sed faucibus turpis in. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Neque aliquam vestibulum morbi blandit. Neque egestas congue quisque egestas diam in. Mi tempus imperdiet nulla malesuada pellentesque. Lacus sed turpis tincidunt id aliquet risus. Ultrices dui sapien eget mi proin sed libero. Maecenas volutpat blandit aliquam etiam erat velit. Scelerisque varius morbi enim nunc faucibus a. Nunc mattis enim ut tellus.</p>
+                <a href="#" class="btn btn--green">Book Now</a>
+            </div>
+        </div>
+    </div>
     <!-- <section class="grid-test">
         <div class="row">
             <div class="col-1-of-2">
