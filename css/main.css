@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/*
+0-600px:    Phone
+600 900px:  Tablet Portait
+900-1200px: Tablet Landscape
+1200-1800px:Normal Style
+1800px+:    Big Desktop    
+
+$breakpoint arguments
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1em =16px
+*/
 *,
 *::after,
 *::before {
@@ -11,6 +25,15 @@ html {
   /*tüm remler bu fontsize göre hesaplnacağından 10 un katı olarka ayarlanıyor. 1 rem root fontsize a eşit.*/
   font-size: 62.5%;
   /*font size a fix pixel değeri vermek iyi değil daha doğtusu borewserin default olan 16 değerini alıp kendine göre 10 pixle ayarlamak.*/ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }

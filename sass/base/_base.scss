@@ -7,8 +7,22 @@
 }
 
 html{
+    
+
     /*font-size: 10px;*/ /*tüm remler bu fontsize göre hesaplnacağından 10 un katı olarka ayarlanıyor. 1 rem root fontsize a eşit.*/
     font-size: 62.5%;/*font size a fix pixel değeri vermek iyi değil daha doğtusu borewserin default olan 16 değerini alıp kendine göre 10 pixle ayarlamak.*/
+
+    @include respond(tab-land){
+        font-size: 56.25%; //1rem = 9px
+    }
+
+    @include respond(tab-port){
+        font-size: 50%; //1rem = 8px
+    }
+
+    @include respond(big-desktop){
+        font-size: 75%; //1rem = 12px
+    }
 }
 
 body {
