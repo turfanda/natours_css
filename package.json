@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/turfanda/natours_css#readme",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "node-sass": "^4.12.0"
